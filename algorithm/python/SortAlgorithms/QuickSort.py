@@ -1,5 +1,5 @@
 import time
-from numpy.oldnumeric.random_array import randint
+from random import randint
 
 
 # Choosing a random pivot minimizes the chance that 
@@ -43,13 +43,13 @@ def runSample():
     numbersLargeList = numbersShortList * 1000
 
     print 'TEST WITH SHORT LIST'
-    runInsertionSortTest(numbersShortList)
+    runQuickSortTest(numbersShortList)
     
     print 'TEST WITH A LARGE LIST'
-    runInsertionSortTest(numbersLargeList)
+    runQuickSortTest(numbersLargeList)
 
 
-def runInsertionSortTest(numbersList):
+def runQuickSortTest(numbersList):
     
     # time in micros
     startTime = int(round(time.time() * 1000000))

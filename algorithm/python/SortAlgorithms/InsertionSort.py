@@ -37,13 +37,13 @@ def runSample():
     numbersLargeList = numbersShortList * 1000
 
     print 'TEST WITH SHORT LIST'
-    runInsertionSortTest(numbersShortList)
+    runInsertionSort(numbersShortList)
     
     print 'TEST WITH A LARGE LIST'
-    runInsertionSortTest(numbersLargeList) 
+    runInsertionSort(numbersLargeList) 
 
 
-def runInsertionSortTest(numbersList):
+def runInsertionSort(numbersList):
     
     # time in micros
     startTime = int(round(time.time() * 1000000))
