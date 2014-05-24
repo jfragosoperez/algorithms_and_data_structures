@@ -1,3 +1,4 @@
+from datetime import time
 from numpy.oldnumeric.random_array import randint
 
 
@@ -6,7 +7,6 @@ from numpy.oldnumeric.random_array import randint
 # choosing first or last would cause worst-case performance 
 # for nearly-sorted or nearly-reverse-sorted data). Choosing 
 # the middle element would also be acceptable in the majority of cases.
-
 # Quicksort is usually faster than other O(nlogn) algorithms
 
 # best case --> O(nlogn) comparisons
@@ -14,6 +14,7 @@ from numpy.oldnumeric.random_array import randint
 # worst case --> O(n^2)
 
 # Space complexity --> Worst: O(n)
+
 
 def quicksort(numbersList):
     less = [ ]
@@ -42,7 +43,17 @@ def runSample():
     
     print "Initial list" 
     print str(numbers) 
+    
+    # time in micros
+    startTime = int(round(time.time() * 1000000))
+
     print quicksort(numbers)
+    
+    # time in micros
+    endTime = int(round(time.time() * 1000000))
+    
+    print 'Sorting time ended up successfully lasting %d microseconds' % (endTime - startTime)
+
 
 if __name__ == "__main__":
     main()
