@@ -1,4 +1,4 @@
-from datetime import time
+import time
 from numpy.oldnumeric.random_array import randint
 
 
@@ -39,21 +39,27 @@ def main():
     
     
 def runSample():    
-    numbers = [3, 30, 1, 2, 43, 432 , 43214, 44, 11, 13, 22, 22, 22, 22, 17, 34]
+    numbersShortList = [3, 30, 1, 2, 43, 432 , 43214, 44, 11, 13, 22, 22, 22, 22, 17, 34]
+    numbersBigList = numbersShortList * 1000
+
+    print 'TEST WITH SHORT LIST'
+    runInsertionSortTest(numbersShortList)
     
-    print "Initial list" 
-    print str(numbers) 
+    print 'TEST WITH SHORT LIST'
+    runInsertionSortTest(numbersBigList)
+
+
+def runInsertionSortTest(numbersList):
     
     # time in micros
     startTime = int(round(time.time() * 1000000))
 
-    print quicksort(numbers)
+    print quicksort(numbersList)
     
     # time in micros
     endTime = int(round(time.time() * 1000000))
     
     print 'Sorting time ended up successfully lasting %d microseconds' % (endTime - startTime)
-
 
 if __name__ == "__main__":
     main()
