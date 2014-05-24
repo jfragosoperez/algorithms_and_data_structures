@@ -1,5 +1,5 @@
 import time
-from random import randrange
+from random import randrange, randint
 
 
 # Choosing a random pivot minimizes the chance that 
@@ -40,8 +40,8 @@ def quicksort(numbersList):
 
     
 def runSample():    
-    numbersShortList = [3, 30, 1, 2, 43, 432 , 43214, 44, 11, 13, 22, 22, 22, 22, 17, 34]
-    numbersLargeList = numbersShortList * 1000
+    numbersShortList = [randint(1, 500) for _ in range(0, 11)]
+    numbersLargeList = [randint(1, 500) for _ in range(0, 15000)]
 
     print 'TEST WITH SHORT LIST'
     runQuickSortTest(numbersShortList)
