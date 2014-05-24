@@ -28,22 +28,18 @@ def insertionSort(numbersList):
     return numbersList    
 
 
-def main():
-    runSample()
-    
-    
 def runSample():    
     numbersShortList = [3, 30, 1, 2, 43, 432 , 43214, 44, 11, 13, 22, 22, 22, 22, 17, 34]
     numbersLargeList = numbersShortList * 1000
 
     print 'TEST WITH SHORT LIST'
-    runInsertionSort(numbersShortList)
+    runInsertionSortTest(numbersShortList)
     
     print 'TEST WITH A LARGE LIST'
-    runInsertionSort(numbersLargeList) 
+    runInsertionSortTest(numbersLargeList) 
 
 
-def runInsertionSort(numbersList):
+def runInsertionSortTest(numbersList):
     
     # time in micros
     startTime = int(round(time.time() * 1000000))
@@ -56,4 +52,4 @@ def runInsertionSort(numbersList):
     print 'Sorting time ended up successfully lasting %d microseconds' % (endTime - startTime)
 
 if __name__ == "__main__":
-    main()
+    runSample()

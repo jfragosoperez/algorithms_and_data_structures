@@ -1,5 +1,5 @@
 import time
-from random import randint
+from random import randrange
 
 
 # Choosing a random pivot minimizes the chance that 
@@ -22,7 +22,11 @@ def quicksort(numbersList):
     equal = [ ]
     
     if len(numbersList) > 1:
-        pivotPosition = randint(0, len(numbersList) - 1)
+        #python method randrange counts up to penultimate element, 
+        #if we want to keep on using the default behaviour that
+        #other programming languages, are used to
+        #we can use randint(0, len(numbersList)-1)
+        pivotPosition = randrange(0, len(numbersList))
         for element in numbersList:
             if element < numbersList[pivotPosition]:
                 less.append(element)
@@ -34,9 +38,6 @@ def quicksort(numbersList):
     else:
         return numbersList  
 
-def main():
-    runSample()
-    
     
 def runSample():    
     numbersShortList = [3, 30, 1, 2, 43, 432 , 43214, 44, 11, 13, 22, 22, 22, 22, 17, 34]
@@ -62,6 +63,6 @@ def runQuickSortTest(numbersList):
     print 'Sorting time ended up successfully lasting %d microseconds' % (endTime - startTime)
 
 if __name__ == "__main__":
-    main()
+    runSample()
         
         
