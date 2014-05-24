@@ -1,3 +1,6 @@
 */RemoteSystemsTempFiles
 .DS_Store              
-.metadata/*
+.metadata
+.project
+.pydevproject
+
