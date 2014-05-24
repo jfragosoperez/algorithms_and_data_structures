@@ -34,13 +34,13 @@ def main():
     
 def runSample():    
     numbersShortList = [3, 30, 1, 2, 43, 432 , 43214, 44, 11, 13, 22, 22, 22, 22, 17, 34]
-    numbersBigList = numbersShortList * 1000
+    numbersLargeList = numbersShortList * 1000
 
     print 'TEST WITH SHORT LIST'
     runInsertionSortTest(numbersShortList)
     
-    print 'TEST WITH SHORT LIST'
-    runInsertionSortTest(numbersBigList) 
+    print 'TEST WITH A LARGE LIST'
+    runInsertionSortTest(numbersLargeList) 
 
 
 def runInsertionSortTest(numbersList):
