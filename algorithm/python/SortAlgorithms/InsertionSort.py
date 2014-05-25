@@ -16,15 +16,17 @@ from random import randint
 
 def insertionSort(numbersList):
         
-    for i in range(1, len(numbersList)):
-        currentItemPosition = i
+    counter = 0    
+    while counter < len(numbersList):
+        currentItemPosition = counter
         swappingValue = numbersList[currentItemPosition]
         
         while currentItemPosition > 0 and swappingValue < numbersList[currentItemPosition - 1]:
             numbersList[currentItemPosition] = numbersList[currentItemPosition - 1]
             currentItemPosition -= 1
         numbersList[currentItemPosition] = swappingValue    
-            
+        counter += 1        
+    
     return numbersList    
 
 
