@@ -4,3 +4,11 @@
 .project
 .pydevproject
 .settings
+.cproject
+
+#IntelliJ IDEA
+.idea
+*.iml
+*.ipr
+*.iws
+out
