@@ -16,7 +16,7 @@ from random import randint
 
 def insertionSort(numbersList):
         
-    counter = 0    
+    counter = 0
     while counter < len(numbersList):
         currentItemPosition = counter
         swappingValue = numbersList[currentItemPosition]

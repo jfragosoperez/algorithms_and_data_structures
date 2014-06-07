@@ -14,7 +14,7 @@ public final class SortingHelper {
      * Sorts an array of integers using the requested algorithm.
      *
      * @param integersArray is the integer array we want to sort
-     * @param type         is the type of sorting we want to apply (the algorithm)
+     * @param type          is the type of sorting we want to apply (the algorithm)
      * @return the list with the elements sorted in ascending order
      */
     public static int[] sortIntegerArray(int[] integersArray, SortAlgorithmType type) {
@@ -49,6 +49,16 @@ public final class SortingHelper {
      * @return the list with the elements sorted in ascending order
      */
     public static int[] insertionSort(int[] integersArray) {
+        int newValue, j;
+        for (int i = 1; i < integersArray.length; i++) {
+            j = i;
+            newValue = integersArray[j];
+            while (j > 0 && integersArray[j - 1] > newValue) {
+                integersArray[j] = integersArray[j - 1];
+                j--;
+            }
+            integersArray[j] = newValue;
+        }
         return integersArray;
     }
 
