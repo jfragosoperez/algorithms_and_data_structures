@@ -58,7 +58,7 @@ public class QueueArrayImpl<E> implements QueueOperations<E> {
 
             return true;
         }
-        if (lastElementInsertedPosition == size() - 1) {
+        if (lastElementInsertedPosition == elements.length - 1) {
             throw new IllegalStateException("The queue reached the maximum number of elements that was able to add.");
         } else {
             this.lastElementInsertedPosition++;
@@ -84,6 +84,9 @@ public class QueueArrayImpl<E> implements QueueOperations<E> {
             E value = this.elements[headPosition];
             this.elements[headPosition] = null;
             lastElementInsertedPosition--;
+            if(lastElementInsertedPosition == -1){
+                headPosition = -1;
+            }
             return value;
         }
         return null;
