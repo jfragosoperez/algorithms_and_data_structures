@@ -9,7 +9,7 @@ import static org.junit.Assert.assertNotNull;
 public class SortAlgorithmsFactoryTest {
 
     @Test(expected = NullPointerException.class)
-    public void testExceptionIsThrown_ifUndefinedSortAlgorithmTypeIsRequested(){
+    public void testExceptionIsThrown_ifUndefinedSortAlgorithmTypeIsRequested() {
         SortAlgorithmsFactory.create(null);
     }
 
