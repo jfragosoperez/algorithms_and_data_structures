@@ -27,7 +27,7 @@ public final class QuickSort implements SortAlgorithm {
 
     private int[] quickSort(int low, int high, int[] elements) {
         int i = low, j = high;
-//        int pivot = elements[low + (high - low) / 2];
+        
         int pivot = elements[randInt(low, (low + (high - low) / 2))];
 
         // Divide into two lists
