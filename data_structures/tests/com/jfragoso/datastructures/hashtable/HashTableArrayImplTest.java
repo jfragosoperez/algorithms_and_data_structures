@@ -40,6 +40,7 @@ public class HashTableArrayImplTest {
         assertFalse(phoneBook.contains("Any value"));
         phoneBook.put("Any value", "444444444");
         assertTrue(phoneBook.contains("Any value"));
+        assertNull(phoneBook.get("Anyone"));
     }
 
     @Test
@@ -48,12 +49,14 @@ public class HashTableArrayImplTest {
         assertTrue(phoneBook.size() == 1);
         assertEquals(phoneBook.remove("EOOO"), "212");
         assertTrue(phoneBook.size() == 0);
+        assertNull(phoneBook.get("Anyone"));
     }
 
     @Test
     public void testGet() throws Exception {
         phoneBook.put("Chewbacca", "123456789");
         assertEquals(phoneBook.get("Chewbacca"), "123456789");
+        assertNull(phoneBook.get("Anyone"));
     }
 
     @Test
@@ -66,6 +69,8 @@ public class HashTableArrayImplTest {
         phoneBook.remove("John");
         assertTrue(phoneBook.size() == 1);
         phoneBook.remove("Peter");
+        assertTrue(phoneBook.size() == 0);
+        phoneBook.remove("Anyone");
         assertTrue(phoneBook.size() == 0);
     }
 
